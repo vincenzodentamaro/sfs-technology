@@ -10,9 +10,13 @@ The sfstechnology is designed for be compiled on x86,AMD64/EM64T(64Bit like plat
 = Details =
 
 Into the package you will find:
+
 --The sfslauncher sources (Free Pascal code).
+
 --The sfslauncher i386 binary file.
+
 --The daemon sources (Free Pascal code).
+
 --The daemon i386 binary file.
 
 To use it you must copy the file called MAKEloop into the "/usr/sbin/sfs" directory, then  you must run this command:
@@ -22,3 +26,5 @@ and then from the user mode console (don't use sudo or switch user) type
 sfslauncher "put here a file sfs"
 
 you can download a sfs file from here: http://www.unixteam.net/index.php?mod=Download/Sfs_Applications_Directory_Download
+
+Make sure to have a kernel that support the squashfs module! Otherwise it doesn't work!
