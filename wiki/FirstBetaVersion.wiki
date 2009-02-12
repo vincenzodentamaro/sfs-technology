@@ -19,6 +19,8 @@ Into the package you will find:
 
 --The daemon i386 binary file.
 
+= How to use this beta version =
+
 To use it you must copy the file called MAKEloop into the "/usr/sbin/sfs" directory, then  you must run this command:
 sudo daemon 
 
