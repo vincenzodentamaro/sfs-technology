@@ -21,12 +21,19 @@ Into the package you will find:
 
 = How to use this beta version =
 
-To use it you must copy the file called MAKEloop into the "/usr/sbin/sfs" directory, then  you must run this command:
+To use it you must:
+1) copy the file called MAKEloop into the "/usr/sbin/sfs" directory, 
+2)then  you must run this command:
+
 sudo daemon 
 
-and then from the user mode console (don't use sudo or switch user) type
+3)from the user mode console (don't use sudo or switch user) type:
+
 sfslauncher "put here a file sfs"
 
-you can download a sfs file from here: http://www.unixteam.net/index.php?mod=Download/Sfs_Applications_Directory_Download
+You can use the SFS version of Google Earth5 from here:
+http://www.unixteam.net/index.php?mod=none_Fdplus&fdaction=download&url=sections/Download/Sfs_Applications_Directory_Download/Internet/GoogleEarth5.sfs
+
+Or you can download a sfs file from here: http://www.unixteam.net/index.php?mod=Download/Sfs_Applications_Directory_Download
 
 Make sure to have a kernel that support the squashfs module! Otherwise it doesn't work!
