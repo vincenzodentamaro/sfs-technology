@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/ppc386" Date="1156281955"/>
+  <Params Value=" -S2cgi -CX -OG1 -gl -XX -vewnhi -l -Fu. -osfs sfs.lpr"/>
+</CONFIG>
