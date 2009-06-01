@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="/"/>
+    <Version Value="6"/>
+    <General>
+      <MainUnit Value="0"/>
+      <IconPath Value="./"/>
+      <TargetFileExt Value=""/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <Units Count="6">
+      <Unit0>
+        <Filename Value="sfslauncher.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="sfslauncher"/>
+        <CursorPos X="58" Y="603"/>
+        <TopLine Value="589"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="../../../../../usr/share/fpcsrc/rtl/inc/systemh.inc"/>
+        <CursorPos X="11" Y="611"/>
+        <TopLine Value="599"/>
+        <UsageCount Value="11"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../sfslauncher0.3/sfslauncher/sfslauncher.pas"/>
+        <UnitName Value="sfslauncher"/>
+        <CursorPos X="40" Y="320"/>
+        <TopLine Value="549"/>
+        <UsageCount Value="11"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="daemon/daemon.lpr"/>
+        <UnitName Value="daemon"/>
+        <CursorPos X="46" Y="117"/>
+        <TopLine Value="117"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../../../../usr/share/fpcsrc/rtl/unix/unix.pp"/>
+        <UnitName Value="Unix"/>
+        <CursorPos X="28" Y="188"/>
+        <TopLine Value="176"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../../../usr/share/fpcsrc/fcl/inc/inifiles.pp"/>
+        <UnitName Value="IniFiles"/>
+        <CursorPos X="14" Y="141"/>
+        <TopLine Value="126"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+    </Units>
+    <JumpHistory Count="1" HistoryIndex="0">
+      <Position1>
+        <Filename Value="sfslauncher.lpr"/>
+        <Caret Line="595" Column="60" TopLine="583"/>
+      </Position1>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="8"/>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="2">
+      <Item1>
+        <Source Value="../sfslauncher0.3/sfslauncher/sfslauncher.pas"/>
+        <Line Value="305"/>
+      </Item1>
+      <Item2>
+        <Source Value="../sfslauncher0.3/sfslauncher/sfslauncher.pas"/>
+        <Line Value="563"/>
+      </Item2>
+    </BreakPoints>
+    <Exceptions Count="2">
+      <Item1>
+        <Name Value="ECodetoolError"/>
+      </Item1>
+      <Item2>
+        <Name Value="EFOpenError"/>
+      </Item2>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

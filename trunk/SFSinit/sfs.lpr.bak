@@ -1,0 +1,67 @@
+  //Vincenzo  Dentamaro (c) 2009 SFS Technology
+
+  program sfs;
+
+  {$mode objfpc}{$H+}
+
+  uses
+    cthreads,Classes,Unix,BaseUnix,SysUtils,Process;
+    Var
+    SFS_daemon: TProcess;
+
+
+  Function is_sudo: boolean;   //to determinate if it is runnig in Super user mode or not!
+  var
+  sudoers:textfile;
+  Begin
+    Try
+      system.Assign(sudoers,'/var/sudoers');
+      rewrite(sudoers);
+      closefile(sudoers);
+      result := true;
+    Except
+      result := false;
+    End;
+  End;
+
+  begin
+  SFS_daemon:= Tprocess.Create(nil);
+  SFS_daemon.CommandLine  := '/usr/sbin/sfs/daemon';
+  SFS_daemon.Options := [poNewProcessGroup];
+
+  if is_sudo = true then
+   begin
+
+  if paramstr(1) = 'start' then
+    begin
+    writeln('Starting SFS Technology daemon');
+
+    SFS_daemon.Execute;
+    writeln(' daemon  [OK]');
+    end;
+  if paramstr(1) = 'restart' then
+    begin
+    writeln('Stopping SFS Technology daemon');
+    Unix.Shell('echo "suicide" > /var/sfs-suicide');
+    writeln(' daemon  [DOWN]');
+    writeln('Starting SFS Technology daemon');
+    SFS_daemon.Execute;
+    writeln(' daemon  [OK]');
+
+    end;
+  if paramstr(1) = 'stop' then
+    begin
+    writeln('Stopping SFS Technology daemon');
+    Unix.Shell('echo "suicide" > /var/sfs-suicide');
+    writeln(' daemon  [DOWN]');
+
+    end;
+
+
+   end else
+   begin
+   writeln('Usage: /etc/init.d/sfs start|stop|restart');
+   writeln('You must be root!');
+   end;
+  end.
+
