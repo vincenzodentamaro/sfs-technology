@@ -9,5 +9,6 @@ Solved the daemon's thread distruction error.
 v 1.1.0.1
 
 Improved the multithreading handle.
-
-[URL=http://brainstorm.ubuntu.com/idea/20108/][IMG]http://brainstorm.ubuntu.com/idea/20108/image/2/[/IMG][/URL]
+<a href="http://brainstorm.ubuntu.com/idea/20108/">
+<img src="http://brainstorm.ubuntu.com/idea/20108/image/2/" />
+</a>
