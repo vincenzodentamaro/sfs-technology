@@ -187,9 +187,9 @@
                    'echo "Encoding=UTF-8" >> '+desk_pathvar
                              +sysutils.ExtractFileName(
                              prog_name)+'.desktop');
-                  unix.Shell('echo "Exec=/usr/sbin/sfs/sfslauncher '+prog_name
+                  unix.Shell('echo "Exec=/usr/sbin/sfs/sfslauncher '''+prog_name
                              +
-                             '" >> '+desk_pathvar+sysutils.
+                             '''" >> '+desk_pathvar+sysutils.
                              ExtractFileName(
                              prog_name)+'.desktop');
                   unix.Shell('echo "Icon='+'$HOME/.SFSicons/'+sysutils.
