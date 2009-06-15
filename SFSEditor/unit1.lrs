@@ -1,0 +1,29 @@
+{ Questo è un file risorse generato automaticamente da Lazarus }
+
+LazarusResources.Add('TForm1','FORMDATA',[
+  'TPF0'#6'TForm1'#5'Form1'#4'Left'#3#4#1#6'Height'#2#22#3'Top'#3#180#0#5'Width'
+  +#3#144#1#5'Align'#7#8'alBottom'#11'BorderIcons'#11#12'biSystemMenu'#10'biMin'
+  +'imize'#0#11'BorderStyle'#7#8'bsSingle'#7'Caption'#6#20'SFS automated editor'
+  +#9'FormStyle'#7#11'fsStayOnTop'#4'Menu'#7#9'MainMenu1'#8'OnCreate'#7#10'Form'
+  +'Create'#6'OnShow'#7#8'FormShow'#10'ParentFont'#8#8'Position'#7#9'poDefault'
+  +#10'LCLVersion'#6#6'0.9.26'#0#9'TMainMenu'#9'MainMenu1'#4'left'#2#12#0#9'TMe'
+  +'nuItem'#9'MenuItem1'#7'Caption'#6#7'Project'#0#9'TMenuItem'#9'MenuItem2'#7
+  +'Caption'#6#11'New Project'#7'OnClick'#7#14'MenuItem2Click'#0#0#9'TMenuItem'
+  +#9'MenuItem3'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#9'MenuItem4'#7'Caption'#6#12
+  +'Open Project'#7'OnClick'#7#14'MenuItem4Click'#0#0#9'TMenuItem'#9'MenuItem5'
+  +#7'Caption'#6#12'Save Project'#7'OnClick'#7#14'MenuItem5Click'#0#0#9'TMenuIt'
+  +'em'#9'MenuItem6'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#9'MenuItem7'#7'Caption'
+  +#6#4'Exit'#7'OnClick'#7#14'MenuItem7Click'#0#0#0#9'TMenuItem'#10'MenuItem10'
+  +#7'Caption'#6#8'Make SFS'#0#9'TMenuItem'#10'MenuItem11'#7'Caption'#6'-Select'
+  +' the project''s diretory to make the SFS'#7'OnClick'#7#15'MenuItem11Click'#0
+  +#0#0#9'TMenuItem'#9'MenuItem8'#7'Caption'#6#4'Help'#0#9'TMenuItem'#9'MenuIte'
+  +'m9'#7'Caption'#6#7'Credits'#7'OnClick'#7#14'MenuItem9Click'#0#0#0#0#22'TSel'
+  +'ectDirectoryDialog'#22'SelectDirectoryDialog1'#5'Width'#3#185#1#6'Height'#3
+  +#199#1#10'InitialDir'#6#15'/home/vincenzo/'#4'left'#3#150#0#0#0#11'TSaveDial'
+  +'og'#11'SaveDialog1'#5'Width'#3#185#1#6'Height'#3#241#1#10'DefaultExt'#6#4'.'
+  +'sfs'#6'Filter'#6',Compressed SFS Executable file (*.sfs)|*.sfs'#4'left'#3
+  +#210#0#0#0#11'TOpenDialog'#11'OpenDialog1'#6'Filter'#6'3SFS Project (*.sfprj'
+  +')|*.sfprj|Tarball (*.tar)|*.tar'#4'left'#2'@'#0#0#11'TSaveDialog'#11'SaveDi'
+  +'alog2'#10'DefaultExt'#6#6'.sfprj'#6'Filter'#6'3SFS Project (*.sfprj)|*.sfpr'
+  +'j|Tarball (*.tar)|*.tar'#4'left'#2'p'#0#0#0
+]);

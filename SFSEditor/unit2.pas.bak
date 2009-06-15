@@ -1,0 +1,193 @@
+unit Unit2; 
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, LResources,unix, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  Buttons, ComCtrls;
+
+type
+
+  { TForm2 }
+
+  TForm2 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    ck: TCheckBox;
+    cm: TComboBox;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    od: TOpenDialog;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure ckChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure ckClick(Sender: TObject);
+    procedure cmChange(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end; 
+
+var
+  Form2: TForm2; 
+  isDebian: boolean;
+  isTarball: boolean;
+  isRpm: boolean;
+  path: String;
+  tmpPath:String;
+  processID:string;
+implementation
+
+{ TForm2 }
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+processID:=inttostr(GetProcessID);
+tmpPath:= '/tmp/sfs'+processID;
+   isDebian:=true;
+   isTarball:=false;
+   isRpm:=false;
+
+end;
+
+procedure TForm2.ckClick(Sender: TObject);
+begin
+    if ck.Checked = true then
+   begin
+     button1.Enabled:=false;
+     ck.Checked:=false;
+     edit2.Enabled:=false;
+   end;
+  if ck.Checked = false then
+   begin
+     button1.Enabled:=true;
+     ck.Checked:=true;
+     edit2.Enabled:=true;
+   end;
+end;
+
+procedure TForm2.cmChange(Sender: TObject);
+begin
+if cm.Items.Strings[cm.ItemIndex]= 'Debian package (*.deb)'then
+  begin
+   isDebian:=true;
+   isTarball:=false;
+   isRpm:=false;
+  end;
+if cm.Items.Strings[cm.ItemIndex]= 'RPM package (*.rpm)'then
+  begin
+  isDebian:=false;
+  isRpm:=true;
+  isTarball:=false;
+
+  end;
+if cm.Items.Strings[cm.ItemIndex]= 'Tarball package (*tar.gz/*tar.bz2)'then
+  begin
+  isDebian:=false;
+  isRpm:=false;
+  isTarball:=true;
+  end;
+
+
+end;
+
+procedure TForm2.ckChange(Sender: TObject);
+begin
+  if ck.Checked = true then
+   begin
+     button1.Enabled:=true;
+
+     edit2.Enabled:=false;
+   end;
+  if ck.Checked = false then
+   begin
+     button1.Enabled:=false;
+
+     edit2.Enabled:=true;
+   end;
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+if isDebian then
+ begin
+   od.Filter:='Debian package (*.deb)|*.deb';
+   od.Title:='Open debian package';
+   od.DefaultExt:='deb';
+   if od.Execute then
+     begin
+      label3.Caption:=od.FileName;
+     end;
+ 
+ end;
+ if isRpm then
+ begin
+   od.Filter:='Red Hat package manager file format (*.rpm)|*.rpm';
+   od.Title:='Open RPM package';
+   od.DefaultExt:='rpm';
+   if od.Execute then
+     begin
+      label3.Caption:=od.FileName;
+     end;
+
+ end;
+ if isTarball then
+ begin
+   od.Filter:='Tarball package (*.tar.gz;*.tar.bz2)|*.tar.gz;*.tar.bz2';
+   od.Title:='Open tarball package';
+   od.DefaultExt:='tar.gz';
+   if od.Execute then
+     begin
+      label3.Caption:=od.FileName;
+     end;
+
+ end;
+
+end;
+
+procedure TForm2.Button2Click(Sender: TObject);
+
+begin
+
+  sysutils.CreateDir('/tmp/SFSeditor');
+  if sysutils.DirectoryExists('/tmp/SFSeditor/'+edit1.Text) then
+    begin
+      sysutils.CreateDir('/tmp/SFSeditor/'+edit1.Text+inttostr(System.GetThreadID));
+      path := '/tmp/SFSeditor/'+edit1.Text+inttostr(System.GetThreadID);
+    end;
+  sysutils.CreateDir('/tmp/SFSeditor/'+edit1.Text);
+  path:='/tmp/SFSeditor/'+edit1.Text;
+
+  if ck.Checked then
+   begin
+
+   //estrai il file selezionato e scarica ed estrai le dipendenze
+   
+   end;
+  if ck.Checked=false then
+    begin
+
+     //scarica i pacchetti con le dipendenze (apt-get)
+    if isDebian then
+     begin
+      unix.Shell('apt-get clean');
+      unix.Shell('apt-get install -d -y '+edit2.Text);
+      unix.Shell('dpkg --extract /var/cache/apt/archives/*.deb '+tmpPath);
+    end;
+    
+  end;
+end;
+
+initialization
+  {$I unit2.lrs}
+
+end.
+

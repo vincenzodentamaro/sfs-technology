@@ -1,0 +1,111 @@
+object Form3: TForm3
+  Left = 246
+  Height = 293
+  Top = 302
+  Width = 749
+  ActiveControl = ListBox1
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Environment variable editor'
+  ClientHeight = 293
+  ClientWidth = 749
+  OnCreate = FormCreate
+  ParentFont = False
+  LCLVersion = '0.9.26'
+  object Label1: TLabel
+    Left = 11
+    Height = 17
+    Top = 24
+    Width = 732
+    Caption = 'Insert the Environment variable(e.g LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WORKDIR/usr/lib:)'
+    ParentColor = False
+  end
+  object ListBox1: TListBox
+    Left = 232
+    Height = 158
+    Top = 128
+    Width = 510
+    PopupMenu = PopupMenu1
+    TabOrder = 0
+    TopIndex = -1
+  end
+  object Edit1: TEdit
+    Left = 8
+    Height = 40
+    Top = 56
+    Width = 731
+    TabOrder = 1
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 168
+    Top = 118
+    Width = 216
+    Caption = 'Control Panel'
+    ClientHeight = 147
+    ClientWidth = 212
+    TabOrder = 2
+    object Button1: TButton
+      Left = 6
+      Height = 49
+      Top = 15
+      Width = 90
+      BorderSpacing.InnerBorder = 4
+      Caption = '&Add'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 112
+      Height = 48
+      Top = 15
+      Width = 94
+      BorderSpacing.InnerBorder = 4
+      Caption = '&Remove'
+      OnClick = Button2Click
+      TabOrder = 1
+    end
+    object Button3: TButton
+      Left = 6
+      Height = 48
+      Top = 87
+      Width = 90
+      BorderSpacing.InnerBorder = 4
+      Caption = 'Re&place'
+      OnClick = Button3Click
+      TabOrder = 2
+    end
+    object BitBtn1: TBitBtn
+      Left = 112
+      Height = 48
+      Top = 87
+      Width = 92
+      Caption = '&OK'
+      Default = True
+      Kind = bkOK
+      ModalResult = 1
+      NumGlyphs = 0
+      OnClick = BitBtn1Click
+      TabOrder = 3
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    left = 249
+    top = 265
+    object MenuItem1: TMenuItem
+      Caption = 'Add...'
+      object MenuItem2: TMenuItem
+        Caption = 'Standard library path (usr/lib)'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Standard executables path (usr/bin)'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = ' Selected library path'
+        OnClick = MenuItem3Click
+      end
+    end
+  end
+end

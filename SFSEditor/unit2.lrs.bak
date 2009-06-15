@@ -1,0 +1,34 @@
+{ Questo  un file risorse generato automaticamente da Lazarus }
+
+LazarusResources.Add('TForm2','FORMDATA',[
+  'TPF0'#6'TForm2'#5'Form2'#4'Left'#3'D'#1#6'Height'#3'n'#1#3'Top'#2'{'#5'Width'
+  +#3#158#1#18'HorzScrollBar.Page'#3#157#1#18'VertScrollBar.Page'#3'm'#1#13'Act'
+  +'iveControl'#7#5'Edit1'#7'Caption'#6#11'New Project'#8'OnCreate'#7#10'FormCr'
+  +'eate'#8'Position'#7#15'poDesktopCenter'#0#6'TLabel'#6'Label1'#4'Left'#2#16#6
+  +'Height'#2#12#3'Top'#2'0'#5'Width'#2'L'#7'Caption'#6#12'Project Name'#5'Colo'
+  +'r'#7#6'clNone'#12'Font.CharSet'#7#12'ANSI_CHARSET'#11'Font.Height'#2#12#11
+  +'ParentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2#16#6'Height'#2#17#3'Top'#2
+  +'p'#5'Width'#3#137#0#7'Caption'#6#18'Kind of conversion'#5'Color'#7#6'clNone'
+  +#11'ParentColor'#8#0#0#6'TLabel'#6'Label3'#4'Left'#2#8#6'Height'#2' '#3'Top'
+  +#3#200#0#5'Width'#2#25#5'Color'#7#6'clNone'#11'ParentColor'#8#0#0#6'TLabel'#6
+  +'Label4'#4'Left'#2#16#6'Height'#2#17#3'Top'#3#248#0#5'Width'#3#1#1#7'Caption'
+  +#6'"Software to create SFS (e.g. nano)'#5'Color'#7#6'clNone'#11'ParentColor'
+  +#8#0#0#5'TEdit'#5'Edit1'#4'Left'#3#128#0#6'Height'#2#23#3'Top'#2'*'#5'Width'
+  +#3#248#0#8'TabOrder'#2#0#4'Text'#6#7'unknown'#0#0#9'TComboBox'#2'cm'#4'Left'
+  +#3#168#0#6'Height'#2#25#3'Top'#2'h'#5'Width'#3#208#0#16'AutoCompleteText'#11
+  +#22'cbactEndOfLineComplete'#20'cbactSearchAscending'#0#9'ItemIndex'#2#0#13'I'
+  +'tems.Strings'#1#6#22'Debian package (*.deb)'#6#19'RPM package (*.rpm)'#6'"T'
+  +'arball package (*tar.gz/*tar.bz2)'#0#9'MaxLength'#2#0#8'OnChange'#7#8'cmCha'
+  +'nge'#8'TabOrder'#2#1#4'Text'#6#22'Debian package (*.deb)'#0#0#9'TCheckBox'#2
+  +'ck'#4'Left'#2#16#6'Height'#2#28#3'Top'#3#160#0#5'Width'#3#197#0#7'Caption'#6
+  +#26'I have the file to convert'#8'OnChange'#7#8'ckChange'#8'TabOrder'#2#2#0#0
+  +#7'TButton'#7'Button1'#4'Left'#3#248#0#6'Height'#2'%'#3'Top'#3#152#0#5'Width'
+  +#2'`'#25'BorderSpacing.InnerBorder'#2#4#7'Caption'#6#11'Select file'#7'Enabl'
+  +'ed'#8#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#3#0#0#5'TEdit'#5'Edit2'#4
+  +'Left'#2#16#6'Height'#2#23#3'Top'#3#16#1#5'Width'#3#128#1#8'TabOrder'#2#4#0#0
+  +#7'TButton'#7'Button2'#4'Left'#2#8#6'Height'#2'!'#3'Top'#3'0'#1#5'Width'#3
+  +#144#1#25'BorderSpacing.InnerBorder'#2#4#7'Caption'#6'0Download and unpack s'
+  +'oftware and/or dependencies'#7'OnClick'#7#12'Button2Click'#8'TabOrder'#2#5#0
+  +#0#11'TOpenDialog'#2'od'#5'Title'#6#19'Apri file esistenti'#11'FilterIndex'#2
+  +#0#4'left'#3#240#0#3'top'#3'`'#1#0#0#0
+]);
