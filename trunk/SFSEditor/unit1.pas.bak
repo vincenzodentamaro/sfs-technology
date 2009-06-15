@@ -1,0 +1,105 @@
+unit Unit1; 
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  Menus,unit2,unit3;
+
+type
+
+  { TForm1 }
+
+  TForm1 = class(TForm)
+    MainMenu1: TMainMenu;
+    Memo1: TMemo;
+    MenuItem1: TMenuItem;
+    MenuItem2: TMenuItem;
+    MenuItem3: TMenuItem;
+    MenuItem4: TMenuItem;
+    MenuItem5: TMenuItem;
+    MenuItem6: TMenuItem;
+    MenuItem7: TMenuItem;
+    MenuItem8: TMenuItem;
+    MenuItem9: TMenuItem;
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure Memo1Change(Sender: TObject);
+    procedure MenuItem2Click(Sender: TObject);
+    procedure MenuItem7Click(Sender: TObject);
+    procedure MenuItem8Click(Sender: TObject);
+    procedure MenuItem9Click(Sender: TObject);
+  private
+    { private declarations }
+    function is_sudo:boolean;
+  public
+    { public declarations }
+    
+  end; 
+
+var
+  Form1: TForm1; 
+  sudoers:TextFile;
+implementation
+
+{ TForm1 }
+Function Tform1.is_sudo: boolean; //this simple boolean function is intended to be used for determinate if we are working in super user mode or not.
+Begin
+  Try
+    system.Assign(sudoers,'/var/sudoers');
+    rewrite(sudoers);
+    closefile(sudoers);
+    result := true;
+  Except
+    result := false;
+  End;
+End;
+
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+
+
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  if not form1.is_sudo then
+  begin
+   showmessage('You must be root to use this software');
+   form1.Close;
+  end;
+end;
+
+procedure TForm1.Memo1Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.MenuItem2Click(Sender: TObject);
+begin
+ form2.showmodal;
+end;
+
+procedure TForm1.MenuItem7Click(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TForm1.MenuItem8Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.MenuItem9Click(Sender: TObject);
+begin
+  form3.show;
+end;
+
+initialization
+  {$I unit1.lrs}
+
+end.
+

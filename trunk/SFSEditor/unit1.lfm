@@ -1,0 +1,81 @@
+object Form1: TForm1
+  Left = 260
+  Height = 22
+  Top = 180
+  Width = 400
+  Align = alBottom
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'SFS automated editor'
+  FormStyle = fsStayOnTop
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnShow = FormShow
+  ParentFont = False
+  Position = poDefault
+  LCLVersion = '0.9.26'
+  object MainMenu1: TMainMenu
+    left = 12
+    object MenuItem1: TMenuItem
+      Caption = 'Project'
+      object MenuItem2: TMenuItem
+        Caption = 'New Project'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Open Project'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Save Project'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'Exit'
+        OnClick = MenuItem7Click
+      end
+    end
+    object MenuItem10: TMenuItem
+      Caption = 'Make SFS'
+      object MenuItem11: TMenuItem
+        Caption = 'Select the project''s diretory to make the SFS'
+        OnClick = MenuItem11Click
+      end
+    end
+    object MenuItem8: TMenuItem
+      Caption = 'Help'
+      object MenuItem9: TMenuItem
+        Caption = 'Credits'
+        OnClick = MenuItem9Click
+      end
+    end
+  end
+  object SelectDirectoryDialog1: TSelectDirectoryDialog
+    Width = 441
+    Height = 455
+    InitialDir = '/home/vincenzo/'
+    left = 150
+  end
+  object SaveDialog1: TSaveDialog
+    Width = 441
+    Height = 497
+    DefaultExt = '.sfs'
+    Filter = 'Compressed SFS Executable file (*.sfs)|*.sfs'
+    left = 210
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'SFS Project (*.sfprj)|*.sfprj|Tarball (*.tar)|*.tar'
+    left = 64
+  end
+  object SaveDialog2: TSaveDialog
+    DefaultExt = '.sfprj'
+    Filter = 'SFS Project (*.sfprj)|*.sfprj|Tarball (*.tar)|*.tar'
+    left = 112
+  end
+end

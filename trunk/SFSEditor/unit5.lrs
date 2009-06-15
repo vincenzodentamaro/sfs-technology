@@ -1,0 +1,10 @@
+{ Questo è un file risorse generato automaticamente da Lazarus }
+
+LazarusResources.Add('TForm5','FORMDATA',[
+  'TPF0'#6'TForm5'#5'Form5'#4'Left'#3#191#2#6'Height'#3#212#0#3'Top'#3#143#0#5
+  +'Width'#3#12#1#7'Caption'#6#13'Event Tracker'#12'ClientHeight'#3#212#0#11'Cl'
+  +'ientWidth'#3#12#1#10'ParentFont'#8#8'Position'#7#15'poDesktopCenter'#13'Sho'
+  +'wInTaskBar'#7#7'stNever'#10'LCLVersion'#6#6'0.9.26'#7'Visible'#9#0#5'TMemo'
+  +#5'Memo1'#6'Height'#3#212#0#5'Width'#3#12#1#5'Align'#7#8'alClient'#8'ReadOnl'
+  +'y'#9#10'ScrollBars'#7#6'ssBoth'#8'TabOrder'#2#0#0#0#0
+]);

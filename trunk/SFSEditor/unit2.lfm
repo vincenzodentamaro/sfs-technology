@@ -1,0 +1,129 @@
+object Form2: TForm2
+  Left = 30
+  Height = 366
+  Top = 158
+  Width = 414
+  ActiveControl = Edit1
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'New Project'
+  ClientHeight = 366
+  ClientWidth = 414
+  OnCreate = FormCreate
+  ParentFont = False
+  Position = poDesktopCenter
+  LCLVersion = '0.9.26'
+  object Label1: TLabel
+    Left = 16
+    Height = 20
+    Top = 48
+    Width = 110
+    Caption = 'Project Name'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = 12
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 18
+    Top = 112
+    Width = 122
+    Caption = 'Kind of conversion'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 44
+    Top = 200
+    Width = 37
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 60
+    Top = 208
+    Width = 320
+    Caption = 'Software to create SFS (e.g. blender)'#10'the sfotware with all needed dependecies will be'#10'automatically downloaded.'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 80
+    Height = 23
+    Top = 8
+    Width = 251
+    Caption = 'Create a New SFS project'
+    Font.Color = 1314777
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 128
+    Height = 23
+    Top = 42
+    Width = 248
+    TabOrder = 0
+    Text = 'unknown'
+  end
+  object cm: TComboBox
+    Left = 168
+    Height = 27
+    Top = 104
+    Width = 208
+    ItemIndex = 0
+    Items.Strings = (
+      'Debian package (*.deb)'
+      'RPM package (*.rpm)'
+      'Tarball package (*tar.gz/*tar.bz2)'
+    )
+    MaxLength = 65535
+    OnChange = cmChange
+    TabOrder = 1
+    Text = 'Debian package (*.deb)'
+  end
+  object ck: TCheckBox
+    Left = 16
+    Height = 20
+    Top = 160
+    Width = 181
+    Caption = 'I have the file to convert'
+    OnChange = ckChange
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 248
+    Height = 37
+    Top = 152
+    Width = 96
+    BorderSpacing.InnerBorder = 4
+    Caption = 'Select file'
+    Enabled = False
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Edit2: TEdit
+    Left = 16
+    Height = 23
+    Top = 272
+    Width = 384
+    TabOrder = 4
+  end
+  object Button2: TButton
+    Left = 8
+    Height = 33
+    Top = 304
+    Width = 400
+    BorderSpacing.InnerBorder = 4
+    Caption = 'Download and unpack software and/or dependencies'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object od: TOpenDialog
+    FilterIndex = 0
+    left = 240
+    top = 352
+  end
+end

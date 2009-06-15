@@ -1,0 +1,22 @@
+object Form5: TForm5
+  Left = 703
+  Height = 212
+  Top = 143
+  Width = 268
+  Caption = 'Event Tracker'
+  ClientHeight = 212
+  ClientWidth = 268
+  ParentFont = False
+  Position = poDesktopCenter
+  ShowInTaskBar = stNever
+  LCLVersion = '0.9.26'
+  Visible = True
+  object Memo1: TMemo
+    Height = 212
+    Width = 268
+    Align = alClient
+    ReadOnly = True
+    ScrollBars = ssBoth
+    TabOrder = 0
+  end
+end
