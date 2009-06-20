@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary New features of version 1.1.0.3.
 
 = Introduction =
 List of new features in the version 1.1.0.3
