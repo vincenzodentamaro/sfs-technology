@@ -1,0 +1,14 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+List of new features in the version 1.1.0.3
+= Details =
+
+NEW:
+--This new version allows Nautilus to associate the icon contained into the SFS executable file to the correspondent SFS , having the same effect as the executables files do on Windows or Macintosh, where each has its own icon.
+
+--Make Protable Option: This new option allows you to save the configurations of applications in the same folder where resides the SFS executable file. This directory could be situated on a portable device (like a USB pen) or on a normal root's directory.
+This option is not enabled by default.
+
+--SFS Editor: an editor for the SFS Technology Executable file downloadable from (for i386 and amd64 architectures):
+http://code.google.com/p/sfs-technology/downloads/list
